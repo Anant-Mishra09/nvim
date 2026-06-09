@@ -1,0 +1,10 @@
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>t", function()
+    vim.cmd("belowright split")
+    vim.cmd("terminal")
+end)
+vim.keymap.set("n", "<leader>tc", function()
+    vim.cmd("close")
+end, { desc = "Close terminal window" })
+vim.keymap.set('t', '<C-n>', [[<C-\><C-n>]], { desc = "Exit terminal mode" })
