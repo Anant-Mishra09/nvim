@@ -12,6 +12,13 @@ return {
 	{
 	    "nvim-lualine/lualine.nvim",
 	    dependencies = {"nvim-tree/nvim-web-devicons"},
-	    opts = {theme = 'gruvbox',}
+	    opts = {theme = 'gruvbox',
+	    refresh = {statusline = 1000,},
+	    sections = {lualine_z = {function() return os.date("%H:%M")end,},}
+
+
+
+
+	}
 	}
 }
